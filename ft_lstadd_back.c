@@ -6,7 +6,7 @@
 /*   By: rpinchas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 19:28:02 by rpinchas          #+#    #+#             */
-/*   Updated: 2022/10/24 14:47:34 by rpinchas         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:43:34 by rpinchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		temp = temp->next;
 	}
-	temp->next = new;
+	temp->next = new; 
 }
 /*
 int main()

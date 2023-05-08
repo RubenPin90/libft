@@ -6,7 +6,7 @@
 /*   By: rpinchas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:31:50 by rpinchas          #+#    #+#             */
-/*   Updated: 2022/10/24 17:13:16 by rpinchas         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:00:05 by rpinchas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ static char	*ft_bzero_sp(int n)
 
 	n++;
 	tmp = (char *) malloc (sizeof(char) * 2);
+	if (!tmp)
+		return (NULL);
 	tmp[0] = '0';
 	tmp[1] = '\0';
 	return (tmp);

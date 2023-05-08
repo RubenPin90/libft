@@ -12,33 +12,42 @@
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+static char	*ft_outofstring(char *slice)
 {
-	char			*sn;
-	unsigned int	i;
-	unsigned int	j;
+	slice = (char *)malloc(sizeof(char));
+	if (!slice)
+		return (NULL);
+	*slice = '\0';
+	return (slice);
+}
 
-	j = ft_strlen(s);
-	if (start >= j)
-	{
-		sn = (char *)malloc(sizeof(char));
-		*sn = '\0';
-		return (sn);
-	}
-	if ((j - start) < len)
-		len = j - start;
-	sn = (char *)malloc((len + 1) * sizeof(char));
-	if (sn == NULL)
+char	*ft_substr(const char *string, unsigned int start, size_t len)
+{
+	char			*slice;
+	unsigned int	i;
+	unsigned int	s_len;
+
+	if (!string)
+		return (NULL);
+	slice = 0;
+	s_len = ft_strlen(string);
+	if (start >= s_len)
+		return (ft_outofstring(slice));
+	if ((s_len - start) < len)
+		len = s_len - start;
+	slice = (char *)malloc((len + 1) * sizeof(char));
+	if (!slice)
 		return (NULL);
 	i = 0;
-	while (s[start + i] && i < len)
+	while (string[start + i] && i < len)
 	{
-		sn[i] = s[start + i];
+		slice[i] = string[start + i];
 		i++;
 	}
-	sn[i] = '\0';
-	return (sn);
+	slice[i] = '\0';
+	return (slice);
 }
+
 /*
 int main()
 {

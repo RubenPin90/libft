@@ -60,6 +60,17 @@ static char	**ft_putword(char **arr, char c, const char *s, int i)
 	return (arr);
 }
 
+static void	*free_array(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i])
+		free(array[i++]);
+	free(array);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		word;
@@ -70,9 +81,15 @@ char	**ft_split(char const *s, char c)
 	word = ft_wordcount((char *)s, c);
 	array = (char **) malloc (sizeof(char *) * (word + 1));
 	if (!array)
+	{
+		free(array);
 		return (NULL);
+	}
 	if (!ft_putword(array, c, s, 0))
+	{
+		free_array(array);
 		return (NULL);
+	}
 	array[word] = NULL;
 	return (array);
 }
