@@ -22,8 +22,6 @@
 * [Verwendung](#verwendung)
 * [Beispiel](#beispiel)
 
-* [Kontakt](#kontakt)
-
 ## Über das Projekt
 
 Mit diesem Projekt habe ich meine eigene C-Bibliothek geschrieben. Sie enthält die wichtigsten Funktionen für Zeichen, Strings, Speicher und einfache Listen. Ich habe sie als Werkzeugkasten und Grundlage für viele weitere Projekte im 42-Cursus verwendet.
