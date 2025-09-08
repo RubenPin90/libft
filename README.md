@@ -6,123 +6,123 @@
   </a>
 
   <p align="center">
-    Eine eigene C-Standardbibliothek für den 42-Cursus
+    A custom C standard library for the 42 cursus  
     <br />
   </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
 
-## Inhalt
+## Contents
 
-* [Über das Projekt](#über-das-projekt)
-* [Verwendete Funktionen](#verwendete-funktionen)
-* [Projektstruktur](#projektstruktur)
+* [About the Project](#about-the-project)
+* [Implemented Functions](#implemented-functions)
+* [Project Structure](#project-structure)
 * [Build](#build)
-* [Verwendung](#verwendung)
-* [Beispiel](#beispiel)
+* [Usage](#usage)
+* [Example](#example)
 
-## Über das Projekt
+## About the Project
 
-Mit diesem Projekt habe ich meine eigene C-Bibliothek geschrieben. Sie enthält die wichtigsten Funktionen für Zeichen, Strings, Speicher und einfache Listen. Ich habe sie als Werkzeugkasten und Grundlage für viele weitere Projekte im 42-Cursus verwendet.
+With this project I wrote my own C library. It contains the most important functions for characters, strings, memory, and simple lists. I used it as a toolbox and as the foundation for many further projects in the 42 cursus.
 
-## Verwendete Funktionen
+## Implemented Functions
 
-### Zeichenfunktionen
+### Character Functions
 
-* `ft_isalpha` – prüft, ob Buchstabe
-* `ft_isdigit` – prüft, ob Zahl
-* `ft_isalnum` – prüft, ob Buchstabe oder Zahl
-* `ft_isascii` – prüft, ob ASCII-Zeichen
-* `ft_isprint` – prüft, ob druckbares Zeichen
+* `ft_isalpha` – checks if character is a letter
+* `ft_isdigit` – checks if character is a digit
+* `ft_isalnum` – checks if character is a letter or digit
+* `ft_isascii` – checks if character is an ASCII character
+* `ft_isprint` – checks if character is printable
 
-### Stringfunktionen
+### String Functions
 
-* `ft_strlen` – Länge eines Strings
-* `ft_strdup` – dupliziert String
-* `ft_strchr` – sucht Zeichen von vorne
-* `ft_strrchr` – sucht Zeichen von hinten
-* `ft_strncmp` – vergleicht zwei Strings (n Zeichen)
-* `ft_strnstr` – sucht Teilstring in String
-* `ft_strlcpy` – kopiert String (mit Begrenzung)
-* `ft_strlcat` – hängt String an (mit Begrenzung)
-* `ft_strjoin` – verbindet zwei Strings
-* `ft_strtrim` – entfernt führende/folgende Zeichen
-* `ft_split` – teilt String nach Trenner
-* `ft_substr` – gibt Teilstring zurück
-* `ft_strmapi` – erstellt neuen String mit Funktion auf jedem Zeichen
-* `ft_striteri` – führt Funktion auf jedem Zeichen aus
+* `ft_strlen` – length of a string
+* `ft_strdup` – duplicates a string
+* `ft_strchr` – searches for a character from the start
+* `ft_strrchr` – searches for a character from the end
+* `ft_strncmp` – compares two strings (n characters)
+* `ft_strnstr` – searches for a substring in a string
+* `ft_strlcpy` – copies a string (with size limit)
+* `ft_strlcat` – appends a string (with size limit)
+* `ft_strjoin` – joins two strings
+* `ft_strtrim` – removes leading/trailing characters
+* `ft_split` – splits a string by a delimiter
+* `ft_substr` – returns a substring
+* `ft_strmapi` – creates a new string by applying a function to each character
+* `ft_striteri` – applies a function to each character in place
 
-### Speicherfunktionen
+### Memory Functions
 
-* `ft_memset` – füllt Speicherblock mit Wert
-* `ft_bzero` – setzt Speicherblock auf Null
-* `ft_memcpy` – kopiert Speicherblock
-* `ft_memmove` – wie `ft_memcpy`, aber sicher bei überlappenden Bereichen
-* `ft_memchr` – sucht Byte in Speicherblock
-* `ft_memcmp` – vergleicht zwei Speicherblöcke
-* `ft_calloc` – reserviert Speicher und setzt auf Null
+* `ft_memset` – fills a memory block with a value
+* `ft_bzero` – sets a memory block to zero
+* `ft_memcpy` – copies a memory block
+* `ft_memmove` – like `ft_memcpy`, but safe for overlapping areas
+* `ft_memchr` – searches for a byte in memory
+* `ft_memcmp` – compares two memory blocks
+* `ft_calloc` – allocates memory and sets it to zero
 
-### Umwandlungsfunktionen
+### Conversion Functions
 
-* `ft_atoi` – wandelt String in Zahl um
-* `ft_toupper` – wandelt zu Großbuchstabe
-* `ft_tolower` – wandelt zu Kleinbuchstabe
+* `ft_atoi` – converts a string to an integer
+* `ft_toupper` – converts to uppercase
+* `ft_tolower` – converts to lowercase
 
-### Ausgabe auf File Descriptors
+### Output to File Descriptors
 
-* `ft_putchar_fd` – schreibt Zeichen in ein gewähltes fd
-* `ft_putstr_fd` – schreibt String in ein gewähltes fd
-* `ft_putendl_fd` – schreibt String mit Newline in ein gewähltes fd
-* `ft_putnbr_fd` – schreibt Zahl in ein gewähltes fd
+* `ft_putchar_fd` – writes a character to a given fd
+* `ft_putstr_fd` – writes a string to a given fd
+* `ft_putendl_fd` – writes a string with a newline to a given fd
+* `ft_putnbr_fd` – writes a number to a given fd
 
-### Bonus (Listen)
+### Bonus (Lists)
 
-* `ft_lstnew` – erstellt ein neues Listenelement
-* `ft_lstadd_front` – fügt Element vorne an
-* `ft_lstadd_back` – fügt Element hinten an
-* `ft_lstlast` – gibt letztes Element zurück
-* `ft_lstsize` – zählt Elemente in einer Liste
-* `ft_lstdelone` – löscht ein Element
-* `ft_lstclear` – löscht ganze Liste
+* `ft_lstnew` – creates a new list element
+* `ft_lstadd_front` – adds an element to the front
+* `ft_lstadd_back` – adds an element to the back
+* `ft_lstlast` – returns the last element
+* `ft_lstsize` – counts elements in a list
+* `ft_lstdelone` – deletes one element
+* `ft_lstclear` – deletes the whole list
 
-## Projektstruktur
+## Project Structure
 
 ```
 libft/
-├─ *.c                # Implementierungen der Funktionen
-├─ libft.h            # Header-Datei
-└─ Makefile           # Build-Regeln
+├─ *.c                # Function implementations
+├─ libft.h            # Header file
+└─ Makefile           # Build rules
 ```
 
 ## Build
 
 ```sh
-make        # baut libft.a
-make clean  # entfernt Objektdateien
-make fclean # entfernt auch libft.a
-make re     # baut neu
+make        # builds libft.a
+make clean  # removes object files
+make fclean # removes object files and libft.a
+make re     # rebuilds everything
 ```
 
-## Verwendung
+## Usage
 
-1. Bibliothek bauen:
+1. Build the library:
 
    ```sh
    make
    ```
-2. Beim Kompilieren linken:
+2. Link during compilation:
 
    ```sh
    cc main.c -L. -lft -I . -o myprog
    ```
-3. Im Code:
+3. In your code:
 
    ```c
    #include "libft.h"
    ```
 
-## Beispiel
+## Example
 
 ```c
 #include "libft.h"
@@ -132,7 +132,7 @@ int main(void)
 {
     const char *s = "  Hello 42  ";
     char *temp = ft_strtrim(s, " ");
-    printf("%s\\n", temp);   // Ausgabe: "Hello 42"
+    printf("%s\n", temp);   // Output: "Hello 42"
     free(temp);
     return 0;
 }
